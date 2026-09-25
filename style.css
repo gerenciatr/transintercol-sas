@@ -636,6 +636,7 @@ select {
 .certification-card img {
   display: block;
   width: 100%;
+  min-width: 20px; /* ICONTEC: ancho mínimo digital indicado en la guía. */
   max-width: 142px;
   height: 122px;
   object-fit: contain;
@@ -643,6 +644,7 @@ select {
 }
 
 .certification-card figcaption {
+  font-family: "Arial Narrow", ArialNarrow, "Liberation Sans Narrow", "Roboto Condensed", Arial, sans-serif;
   color: #334351;
   font-size: 11px;
   font-weight: 800;
@@ -655,6 +657,7 @@ select {
 
 .certification-card--ruc img {
   max-width: 310px;
+  min-height: 57px; /* RUC/CCS horizontal: 1,5 cm ≈ 57 px CSS. */
   height: 122px;
 }
 
