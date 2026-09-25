@@ -1527,3 +1527,39 @@ select {
     transition-duration: .01ms !important;
   }
 }
+/* En dispositivos táctiles evitamos el fallo de composición 3D de algunos
+   navegadores móviles. El reverso se intercambia con el frente sin espejarse. */
+@media (hover: none) and (pointer: coarse) {
+  .service-card-inner {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-style: flat;
+    transform-style: flat;
+    transition: none;
+  }
+
+  .service-toggle:checked + .service-card-inner {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .service-front {
+    display: flex;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .service-back {
+    display: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .service-toggle:checked + .service-card-inner .service-front {
+    display: none;
+  }
+
+  .service-toggle:checked + .service-card-inner .service-back {
+    display: flex;
+  }
+}
