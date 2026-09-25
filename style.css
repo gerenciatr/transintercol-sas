@@ -755,6 +755,9 @@ select {
 .service-front {
   cursor: pointer;
   background: #1a2b3c;
+  /* La cara frontal también debe pertenecer al contexto 3D para Firefox. */
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 .service-card:nth-child(2) .service-front {
