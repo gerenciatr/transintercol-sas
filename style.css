@@ -1642,3 +1642,32 @@ select {
 .news-gallery img { display: block; width: 100%; height: auto; }
 .news-gallery a:focus-visible { outline: 3px solid #a96b11; outline-offset: 4px; }
 @media (max-width: 760px) { .news-gallery { grid-template-columns: 1fr; } }
+
+
+/* Ajustes de proporción, lectura y espaciado */
+.pqrs-disclosure { border: 1px solid var(--line); background: var(--white); }
+.pqrs-disclosure > summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 25px 28px; cursor: pointer; list-style: none; }
+.pqrs-disclosure > summary::-webkit-details-marker { display: none; }
+.pqrs-disclosure summary strong { display: block; font: 700 20px/1.4 "Manrope", sans-serif; }
+.pqrs-disclosure summary small { display: block; margin-top: 6px; color: #53606b; line-height: 1.6; }
+.pqrs-toggle { display: grid; place-items: center; flex: 0 0 38px; height: 38px; border-radius: 50%; background: var(--orange); color: var(--navy); font-size: 26px; }
+.pqrs-disclosure[open] .pqrs-toggle { transform: rotate(45deg); }
+.pqrs-disclosure[open] > summary { border-bottom: 1px solid var(--line); }
+.pqrs-disclosure > summary:focus-visible { outline: 3px solid #a96b11; outline-offset: -4px; }
+.news-item { border-radius: 12px; }
+.news-heading h3 { max-width: 850px; letter-spacing: -.025em; }
+.news-video { height: auto; border-radius: 8px; }
+.news-gallery a { display: grid; place-items: center; aspect-ratio: 3 / 4; }
+.news-gallery img { width: 100%; height: 100%; object-fit: contain; }
+.news-description { max-width: 780px; }
+.news-description p { margin: 0 0 22px; }
+.news-description p:last-child { margin-bottom: 0; color: var(--navy); font-weight: 700; }
+section[id] { scroll-margin-top: 140px; }
+@media (max-width: 760px) {
+  .pqrs-disclosure > summary { padding: 20px; }
+  .pqrs-disclosure summary strong { font-size: 18px; }
+  .news-gallery { max-width: 500px; margin-left: auto; margin-right: auto; }
+  .news-gallery a { aspect-ratio: auto; }
+  .news-gallery img { height: auto; }
+  .news-description { font-size: 15px; line-height: 1.8; }
+}
